@@ -1,0 +1,108 @@
+body {
+    max-height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../images/pexels-bruno-massao-3418613.jpg');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -999;
+}
+
+#banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#company-title-div {
+    margin-top: 15%;
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav1 {
+    animation: navFade1 3s;
+    animation-delay: 3s;
+}
+
+.nav2 {
+    animation: navFade2 3s;
+    animation-delay: 4s;
+}
+
+.nav3 {
+    animation: navFade3 3s;
+    animation-delay: 5s;
+}
+
+@keyframes navFade1 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes navFade2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes navFade3 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#company-title-div h1 {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#company-title-div h3 {
+    color: white;
+    text-align: center;
+    letter-spacing: 6px;
+}
