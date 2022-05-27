@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
@@ -19,14 +20,14 @@
 
 <body>
     <div id="banner"></div>
-    <header>
+    <header id="section">
         <nav id="nav">
             <div class="row py-5 d-flex justify-content-center text-white">
                 <div class="col text-center">
                     <h4 class="nav1">ABOUT US</h4>
                 </div>
                 <div class="col text-center">
-                    <h4 class="nav2">PROJECTS</h4>
+                    <h4 class="nav2" style="border: solid yellow 1px;">PROJECTS</h4>
                 </div>
                 <div class="col text-center">
                     <h4 class="nav3">CONTACT</h4>
@@ -35,13 +36,88 @@
         </nav>
     </header>
 
-    <section>
-        <div class="row" id="company-title-div">
-            <h1>STEEL FLEA</h1>
-            <h3>PRODUCTIONS</h3>
-        </div>
-    </section>
-
+    <div>
+        <section>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel"
+                style="width: 40vw; height: 50vh;  margin-top: calc(50vh - 30vh); margin-left: calc(50vw - 20vw); border: red 1px solid;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row" id="company-title-div">
+                            <h1>STEEL FLEA</h1>
+                            <h3>PRODUCTIONS</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-white text-center">
+                            <div class="container p-5">
+                                <h4>We provide affordable multimedia services to companies and creatives</h4>
+                                <hr>
+                                <ul class="list-group bg-transparent text-white">
+                                    <li class="list-group-item border-0 bg-transparent text-white fs-4">Film</li>
+                                    <li class="list-group-item border-0 bg-transparent text-white fs-4">Photography</li>
+                                    <li class="list-group-item border-0 bg-transparent text-white fs-4">Graphic Design
+                                    </li>
+                                    <li class="list-group-item border-0 bg-transparent text-white fs-4">Sound Recording
+                                    </li>
+                                    <li class="list-group-item border-0 bg-transparent text-white fs-4">Web Design</li>
+                                    <li class="list-group-item border-0 bg-transparent text-white fs-4">Marketing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-white text-center">
+                            <div class="container p-5">
+                                <h4>Our projects</h4>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-white text-center">
+                            <div class="container p-5">
+                                <h4>Contact us</h4>
+                                <hr>
+                                <ul class="list-group bg-transparent text-white">
+                                    <li class="list-group-item border-0 bg-transparent text-white fs-4">
+                                        info@steelfleaproductions.com</li>
+                                    <li class="list-group-item border-0 bg-transparent text-white fs-4">(+44) 76985
+                                        326154</li>
+                                    <li class="list-group-item border-0 bg-transparent text-white fs-4">4 Atholl
+                                        Gardens, Dunkeld, Perthshire, PH8 0AT
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
+
+<script>
+    $(document).ready(function () {
+        $(window).load(function () {
+            $("#company-title-div").fadeTo(5000, 1);
+        });
+
+        $("#section").hover(function () {
+            $("#myCarousel").carousel(0);
+        });
+
+        $(".nav1").click(function () {
+            $("#myCarousel").carousel(1);
+        });
+
+        $(".nav2").click(function () {
+            $("#myCarousel").carousel(2);
+        });
+
+        $(".nav3").click(function () {
+            $("#myCarousel").carousel(3);
+        });
+    });
+</script>

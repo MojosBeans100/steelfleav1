@@ -23,45 +23,53 @@ body {
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.nav1:hover,
+.nav2:hover,
+.nav3:hover {
+    text-decoration: underline;
 }
 
 #company-title-div {
-    margin-top: 15%;
-    animation: fadeIn 5s;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    60% {
-        opacity: 0.2;
-    }
-
-    80% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
+    opacity: 0;
 }
 
 .nav1 {
     animation: navFade1 3s;
-    animation-delay: 3s;
+    animation-delay: 5s;
+    -moz-animation: navFade1 3s;
+    -moz-animation-delay: 5s;
+    -webkit-animation: navFade1 3s;
+    -webkit-animation-delay: 5s;
+    -o-animation: navFade1 3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 .nav2 {
     animation: navFade2 3s;
-    animation-delay: 4s;
+    animation-delay: 6s;
+    -moz-animation: navFade2 3s;
+    -moz-animation-delay: 6s;
+    -webkit-animation: navFade2 3s;
+    -webkit-animation-delay: 6s;
+    -o-animation: navFade2 3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 .nav3 {
     animation: navFade3 3s;
-    animation-delay: 5s;
+    animation-delay: 7s;
+    -moz-animation: navFade3 3s;
+    -moz-animation-delay: 7s;
+    -webkit-animation: navFade3 3s;
+    -webkit-animation-delay: 7s;
+    -o-animation: navFade3 3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 @keyframes navFade1 {
